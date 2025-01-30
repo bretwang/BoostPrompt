@@ -1,5 +1,6 @@
-import mistune
 import json
+
+import mistune
 import neologdn
 
 # 读取 Markdown 文件
@@ -18,7 +19,8 @@ def normalize_text(text):
     """对文本进行标准化处理"""
     return neologdn.normalize(text)
 
-clean_text = normalize_text(md_content).replace("\n","")
+
+clean_text = normalize_text(md_content).replace("\n", "")
 
 # 输出 JSONL 格式
 jsonl_data = {"text": clean_text}

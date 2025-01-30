@@ -1,14 +1,24 @@
-import mistune
 import json
+
+import mistune
 
 # 读取 Markdown 文件
 with open("../../data/markdown/1Q84.md", "r", encoding="utf-8") as f:
     md_content = f.read()
 
+
 # 解析 Markdown 提取纯文本
 def extract_text(md):
     # return mistune.html(md).replace("<br>", "\n").replace("<p>", "").replace("</p>", "\n").strip()
-    return mistune.html(md).replace("<br>", "\n").replace("<p>", "").replace("</p>", "\n").replace("\n","").strip()
+    return (
+        mistune.html(md)
+        .replace("<br>", "\n")
+        .replace("<p>", "")
+        .replace("</p>", "\n")
+        .replace("\n", "")
+        .strip()
+    )
+
 
 clean_text = extract_text(md_content)
 
