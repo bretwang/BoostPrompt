@@ -35,19 +35,19 @@ def filter_relevant_data_by_similarity(data, query, max_tokens=2000, similarity_
                 total_tokens += token_count
             else:
                 break
-    
-    return "\n".join(relevant_data)
+    return relevant_data
+    # return "\n".join(relevant_data)
 
-def save_output_to_file(output, output_file):
-    """将筛选后的文本写入文件"""
-    with open(output_file, "w", encoding="utf-8") as file:
-        file.write(output)
+# def save_output_to_file(output, output_file):
+#     """将筛选后的文本写入文件"""
+#     with open(output_file, "w", encoding="utf-8") as file:
+#         file.write(output)
 
-# 示例用法
-file_path = "../../data/markdown/1Q84_knowledge_points.jsonl"  # 请替换为你的 JSONL 文件路径
-output_file = "../../data/markdown/1Q84_prompt.txt"  # 结果输出文件
-query = "青豆が育った宗教団体と「さきがけ」の関係性にはどのようなものがあるのでしょうか？"
-data = load_jsonl(file_path)
-context = filter_relevant_data_by_similarity(data, query)
-save_output_to_file(context, output_file)
-print(f"筛选后的结果已保存到 {output_file}")
+# # 示例用法
+# file_path = "../../data/markdown/1Q84_knowledge_points.jsonl"  # 请替换为你的 JSONL 文件路径
+# output_file = "../../data/markdown/1Q84_prompt.txt"  # 结果输出文件
+# query = "青豆が育った宗教団体と「さきがけ」の関係性にはどのようなものがあるのでしょうか？"
+# data = load_jsonl(file_path)
+# context = filter_relevant_data_by_similarity(data, query)
+# save_output_to_file(context, output_file)
+# print(f"筛选后的结果已保存到 {output_file}")
