@@ -15,3 +15,5 @@ ginza
 ja_ginza
 neologdn
 sentence_transformers
+mistune
+markitdown

@@ -52,3 +52,7 @@ This is a Python project that will grow over time.
   ```bash
   flake8
   ```
+
+python -m spacy download ja_core_news_lg
+
+main logic in markdown folder
