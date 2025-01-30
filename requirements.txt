@@ -7,3 +7,11 @@ flake8>=6.0.0
 isort>=5.12.0
 pytest>=7.4.0
 pytest-cov>=4.1.0
+spacy
+sudachipy
+sudachidict_full
+sudachidict_core
+ginza
+ja_ginza
+neologdn
+sentence_transformers
